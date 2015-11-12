@@ -15,16 +15,23 @@ public class MainActivity extends ActionBarActivity {
 
         TextView swipeTV = (TextView) findViewById(R.id.swipeTV);
         TextView sortTV = (TextView) findViewById(R.id.sortTV);
+        TextView commonTV = (TextView) findViewById(R.id.commonTV);
         swipeTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,TestSwipeActivity.class));
+                startActivity(new Intent(MainActivity.this,SwipeListActivity.class));
             }
         });
         sortTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,SortListActivity.class));
+            }
+        });
+        commonTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,CommonListActivity.class));
             }
         });
 

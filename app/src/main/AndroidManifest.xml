@@ -16,9 +16,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".TestSwipeActivity">
+        <activity android:name=".SwipeListActivity">
          </activity>
         <activity android:name=".SortListActivity">
+        </activity>
+        <activity android:name=".CommonListActivity">
         </activity>
     </application>
 

@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * Created by diyangxia on 2015/10/10.
  */
-public class TestSwipeActivity extends Activity {
+public class SwipeListActivity extends Activity {
 
     private AbListView mListView;
     private PullToRefreshScrollView mPullToRefesh;
@@ -43,7 +43,7 @@ public class TestSwipeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_swipe);
+        setContentView(R.layout.activity_swipe_list);
 
         mHandler = new Handler() {
             @Override
@@ -70,7 +70,7 @@ public class TestSwipeActivity extends Activity {
                     public void onRefresh(
                             PullToRefreshBase<AbScrollView> refreshView) {
                         String label = DateUtils.formatDateTime(
-                                TestSwipeActivity.this,
+                                SwipeListActivity.this,
                                 System.currentTimeMillis(),
                                 DateUtils.FORMAT_SHOW_TIME
                                         | DateUtils.FORMAT_SHOW_DATE
@@ -136,7 +136,7 @@ public class TestSwipeActivity extends Activity {
                 // mListView.invalidate();
                 if (totalCount <= mySwipeAdapter.getCount()) {
                     if (mPullToRefesh.getCurrentMode() == PullToRefreshBase.Mode.PULL_FROM_END) {
-                        Toast.makeText(TestSwipeActivity.this,
+                        Toast.makeText(SwipeListActivity.this,
                                 "数据全部加载完毕", Toast.LENGTH_SHORT).show();
                         mPullToRefesh.onRefreshComplete();
                     }
@@ -178,7 +178,7 @@ public class TestSwipeActivity extends Activity {
 
 
         public View generateView(int i, ViewGroup viewGroup) {
-            return LayoutInflater.from(TestSwipeActivity.this).inflate(R.layout.test_swipe_item, viewGroup, false);
+            return LayoutInflater.from(SwipeListActivity.this).inflate(R.layout.test_swipe_item, viewGroup, false);
         }
 
         @Override
@@ -199,7 +199,7 @@ public class TestSwipeActivity extends Activity {
             editBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(TestSwipeActivity.this,
+                    Toast.makeText(SwipeListActivity.this,
                             "编辑"+ pos, Toast.LENGTH_SHORT).show();
                 }
             });
