@@ -9,6 +9,7 @@ import android.view.ViewParent;
 import android.widget.TextView;
 
 /**
+ * 代码来自张鸿洋的慕课网视频，特此声明
  * Created by Admin on 2015/11/11.
  */
 public class ViewHolder {

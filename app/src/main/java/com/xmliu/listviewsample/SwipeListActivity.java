@@ -178,7 +178,7 @@ public class SwipeListActivity extends Activity {
 
 
         public View generateView(int i, ViewGroup viewGroup) {
-            return LayoutInflater.from(SwipeListActivity.this).inflate(R.layout.test_swipe_item, viewGroup, false);
+            return LayoutInflater.from(SwipeListActivity.this).inflate(R.layout.swipe_list_item, viewGroup, false);
         }
 
         @Override

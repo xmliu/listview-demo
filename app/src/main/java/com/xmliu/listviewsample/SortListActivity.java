@@ -140,7 +140,7 @@ public class SortListActivity extends Activity{
             final int pos = position;
             if (convertView == null) {
                 holder = new DragHolder();
-                convertView = LayoutInflater.from(context).inflate(R.layout.drag_model_function_item, parent, false);
+                convertView = LayoutInflater.from(context).inflate(R.layout.drag_list_item, parent, false);
                 holder.mCheckedIV = (ImageView) convertView.findViewById(R.id.drag_checkbox_iv);
                 holder.nameTV = (TextView) convertView.findViewById(R.id.tvTitle);
                 convertView.setTag(holder);
