@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/sample1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        >
+        <!-- Bottom View Start-->
+        <LinearLayout
+
+            android:id="@+id/bottom_wrapper"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+            <!--What you want to show-->
+            <Button
+                android:id="@+id/swipe_edit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="编辑"
+                />
+
+            <Button
+                android:id="@+id/swipe_delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:background="@android:color/holo_red_dark"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+        <!-- Bottom View End-->
+
+        <!-- Surface View Start -->
+        <LinearLayout
+            android:id="@+id/swipe_front_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:paddingLeft="18dp">
+            <!--What you want to show in SurfaceView-->
+            <ImageView
+                android:id="@+id/click_remove"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/click_remove"
+                android:gravity="center"
+                android:text="哈哈所得税疯狂地佛顶骨麻烦的"/>
+
+
+            <ImageView
+                android:id="@+id/drag_handle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                />
+
+        </LinearLayout>
+        <!-- Surface View End -->
+    </com.daimajia.swipe.SwipeLayout>
+
+</RelativeLayout>

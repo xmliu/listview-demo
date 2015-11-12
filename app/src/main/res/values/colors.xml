@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="tips">#FF8E8E8E</color>
+    <color name="common_tab_bg_light_gray">#D9DCE1</color>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/holo_blue_light">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择排序"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <com.mobeta.android.dslv.DragSortListView
+            android:id="@+id/dslvList"
+            xmlns:dslv="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.0"
+            android:background="@color/transparent"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="15dp"
+            android:listSelector="@color/transparent"
+            dslv:click_remove_id="@id/click_remove"
+            dslv:collapsed_height="1px"
+            dslv:drag_enabled="true"
+            dslv:drag_handle_id="@id/drag_handle"
+            dslv:drag_scroll_start="0.33"
+            dslv:drag_start_mode="onLongPress"
+            dslv:float_alpha="0.6"
+            dslv:remove_enabled="false"
+            dslv:remove_mode="clickRemove"
+            dslv:slide_shuffle_speed="0.3">
+        </com.mobeta.android.dslv.DragSortListView>
+
+        <Button
+            android:id="@+id/model_bottom_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/holo_blue_light"
+            android:text="完成"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
